@@ -53,6 +53,8 @@
             this.btnDemandeModifDev = new System.Windows.Forms.Button();
             this.grbLesDeveloppeurs = new System.Windows.Forms.GroupBox();
             this.dgvDeveloppeurs = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.grbPwd.SuspendLayout();
             this.grbDeveloppeur.SuspendLayout();
             this.grbLesDeveloppeurs.SuspendLayout();
@@ -114,7 +116,7 @@
             this.grbPwd.Controls.Add(this.txtPwd2);
             this.grbPwd.Controls.Add(this.txtPwd1);
             this.grbPwd.Controls.Add(this.label6);
-            this.grbPwd.Location = new System.Drawing.Point(11, 415);
+            this.grbPwd.Location = new System.Drawing.Point(11, 502);
             this.grbPwd.Name = "grbPwd";
             this.grbPwd.Size = new System.Drawing.Size(605, 77);
             this.grbPwd.TabIndex = 6;
@@ -249,7 +251,7 @@
             this.grbDeveloppeur.Controls.Add(this.txtPrenom);
             this.grbDeveloppeur.Controls.Add(this.label1);
             this.grbDeveloppeur.Controls.Add(this.txtNom);
-            this.grbDeveloppeur.Location = new System.Drawing.Point(11, 280);
+            this.grbDeveloppeur.Location = new System.Drawing.Point(11, 367);
             this.grbDeveloppeur.Name = "grbDeveloppeur";
             this.grbDeveloppeur.Size = new System.Drawing.Size(605, 129);
             this.grbDeveloppeur.TabIndex = 5;
@@ -258,7 +260,7 @@
             // 
             // btnDemandeChangePwd
             // 
-            this.btnDemandeChangePwd.Location = new System.Drawing.Point(168, 231);
+            this.btnDemandeChangePwd.Location = new System.Drawing.Point(168, 320);
             this.btnDemandeChangePwd.Name = "btnDemandeChangePwd";
             this.btnDemandeChangePwd.Size = new System.Drawing.Size(85, 23);
             this.btnDemandeChangePwd.TabIndex = 3;
@@ -268,7 +270,7 @@
             // 
             // btnDemandeSupprDev
             // 
-            this.btnDemandeSupprDev.Location = new System.Drawing.Point(87, 231);
+            this.btnDemandeSupprDev.Location = new System.Drawing.Point(87, 320);
             this.btnDemandeSupprDev.Name = "btnDemandeSupprDev";
             this.btnDemandeSupprDev.Size = new System.Drawing.Size(75, 23);
             this.btnDemandeSupprDev.TabIndex = 2;
@@ -278,7 +280,7 @@
             // 
             // btnDemandeModifDev
             // 
-            this.btnDemandeModifDev.Location = new System.Drawing.Point(6, 231);
+            this.btnDemandeModifDev.Location = new System.Drawing.Point(6, 320);
             this.btnDemandeModifDev.Name = "btnDemandeModifDev";
             this.btnDemandeModifDev.Size = new System.Drawing.Size(75, 23);
             this.btnDemandeModifDev.TabIndex = 1;
@@ -288,13 +290,15 @@
             // 
             // grbLesDeveloppeurs
             // 
+            this.grbLesDeveloppeurs.Controls.Add(this.label8);
+            this.grbLesDeveloppeurs.Controls.Add(this.comboBox1);
             this.grbLesDeveloppeurs.Controls.Add(this.btnDemandeChangePwd);
             this.grbLesDeveloppeurs.Controls.Add(this.btnDemandeSupprDev);
             this.grbLesDeveloppeurs.Controls.Add(this.btnDemandeModifDev);
             this.grbLesDeveloppeurs.Controls.Add(this.dgvDeveloppeurs);
-            this.grbLesDeveloppeurs.Location = new System.Drawing.Point(11, 10);
+            this.grbLesDeveloppeurs.Location = new System.Drawing.Point(11, 12);
             this.grbLesDeveloppeurs.Name = "grbLesDeveloppeurs";
-            this.grbLesDeveloppeurs.Size = new System.Drawing.Size(605, 264);
+            this.grbLesDeveloppeurs.Size = new System.Drawing.Size(605, 349);
             this.grbLesDeveloppeurs.TabIndex = 4;
             this.grbLesDeveloppeurs.TabStop = false;
             this.grbLesDeveloppeurs.Text = "les développeurs";
@@ -305,21 +309,38 @@
             this.dgvDeveloppeurs.AllowUserToDeleteRows = false;
             this.dgvDeveloppeurs.AllowUserToResizeRows = false;
             this.dgvDeveloppeurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeveloppeurs.Location = new System.Drawing.Point(6, 19);
+            this.dgvDeveloppeurs.Location = new System.Drawing.Point(6, 44);
             this.dgvDeveloppeurs.MultiSelect = false;
             this.dgvDeveloppeurs.Name = "dgvDeveloppeurs";
             this.dgvDeveloppeurs.ReadOnly = true;
             this.dgvDeveloppeurs.RowHeadersVisible = false;
             this.dgvDeveloppeurs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvDeveloppeurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDeveloppeurs.Size = new System.Drawing.Size(581, 206);
+            this.dgvDeveloppeurs.Size = new System.Drawing.Size(581, 270);
             this.dgvDeveloppeurs.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(466, 17);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(385, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Filtrer par profil";
             // 
             // FrmHabilitations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 502);
+            this.ClientSize = new System.Drawing.Size(637, 591);
             this.Controls.Add(this.grbPwd);
             this.Controls.Add(this.grbDeveloppeur);
             this.Controls.Add(this.grbLesDeveloppeurs);
@@ -330,6 +351,7 @@
             this.grbDeveloppeur.ResumeLayout(false);
             this.grbDeveloppeur.PerformLayout();
             this.grbLesDeveloppeurs.ResumeLayout(false);
+            this.grbLesDeveloppeurs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeveloppeurs)).EndInit();
             this.ResumeLayout(false);
 
@@ -362,6 +384,8 @@
         private System.Windows.Forms.Button btnDemandeModifDev;
         private System.Windows.Forms.GroupBox grbLesDeveloppeurs;
         private System.Windows.Forms.DataGridView dgvDeveloppeurs;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
