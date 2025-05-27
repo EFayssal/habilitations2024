@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace habilitations2024
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Point d'entrée principal de l'application.
@@ -16,7 +16,7 @@ namespace habilitations2024
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new view.FrmHabilitations());
         }
     }
 }
