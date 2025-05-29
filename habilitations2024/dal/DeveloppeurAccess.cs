@@ -92,7 +92,22 @@ namespace habilitations2024.dal
                 }
             }
             return lesDeveloppeurs;
+
         }
+        public List<Developpeur> GetLesDeveloppeurs(int idProfil)
+        {
+            if (idProfil == 0)
+            {
+                // Retourne tous les développeurs si "Tous les profils" est sélectionné
+                return GetLesDeveloppeurs();
+            }
+            else
+            {
+                // Retourne seulement ceux du profil demandé
+                return GetLesDeveloppeurs().Where(d => d.Profil.Idprofil == idProfil).ToList();
+            }
+        }
+
 
         /// <summary>
         /// Demande de suppression d'un développeur

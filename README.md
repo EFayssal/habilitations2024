@@ -17,7 +17,7 @@ Voici la structure de la BDD qui est au format MySQL :<br>
 
 ### Interface et fonctionnalités
 Voici à quoi doit ressembler la fenêtre de l'application :<br>
-![1-Ecran](https://github.com/CNED-SLAM/Habilitations/assets/100127886/4aa72f04-1b49-40b2-a0c4-502cdb0f4995)
+![1-Ecran](https://github.com/user-attachments/assets/10cac07c-38f3-49fb-a102-8fe45876f58a)
 <br>
 L'application doit permettre de :<br>
 . présenter la liste des développeurs (nom, prénom, tel, mail, profil) sachant qu'il existe une liste déterminée de profils (admin, stagiaire, designer, dev-front, dev-back) ;<br>
