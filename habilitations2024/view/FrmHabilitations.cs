@@ -52,6 +52,7 @@ namespace habilitations2024.view
             controller = new FrmHabilitationsController();
             RemplirListeDeveloppeurs();
             RemplirListeProfils();
+            RemplirComboFiltreProfils(); 
             EnCourseModifDeveloppeur(false);
             EnCoursModifPwd(false);
         }
@@ -59,9 +60,9 @@ namespace habilitations2024.view
         /// <summary>
         /// Affiche les développeurs
         /// </summary>
-        private void RemplirListeDeveloppeurs()
+        private void RemplirListeDeveloppeurs(int idProfil = 0)
         {
-            List<Developpeur> lesDeveloppeurs = controller.GetLesDeveloppeurs();
+            List<Developpeur> lesDeveloppeurs = controller.GetLesDeveloppeurs(idProfil);
             bdgDeveloppeurs.DataSource = lesDeveloppeurs;
             dgvDeveloppeurs.DataSource = bdgDeveloppeurs;
             dgvDeveloppeurs.Columns["iddeveloppeur"].Visible = false;
@@ -102,11 +103,7 @@ namespace habilitations2024.view
             }
         }
 
-        /// <summary>
-        /// Demande de suppression d'un développeur
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Mise à jour de la méthod et inclure les parametres 
         private void BtnDemandeSupprDev_Click(object sender, EventArgs e)
         {
             if (dgvDeveloppeurs.SelectedRows.Count > 0)
@@ -115,7 +112,7 @@ namespace habilitations2024.view
                 if (MessageBox.Show("Voulez-vous vraiment supprimer " + developpeur.Nom + " " + developpeur.Prenom + " ?", "Confirmation de suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     controller.DelDeveloppeur(developpeur);
-                    RemplirListeDeveloppeurs();
+                    RemplirListeDeveloppeurs(0); // Passer une valeur par défaut
                 }
             }
             else
@@ -252,6 +249,29 @@ namespace habilitations2024.view
             grbDeveloppeur.Enabled = !modif;
             txtPwd1.Text = "";
             txtPwd2.Text = "";
+        }
+        private void RemplirComboFiltreProfils()
+        {
+            List<Profil> profils = controller.GetLesProfils();
+            profils.Insert(0, new Profil(0, ""));
+            cboFiltreProfil.DataSource = profils;
+            cboFiltreProfil.DisplayMember = "Nom";
+            cboFiltreProfil.ValueMember = "Idprofil";
+            cboFiltreProfil.SelectedIndex = 0;
+            cboFiltreProfil.SelectedIndexChanged += cboFiltreProfil_SelectedIndexChanged;
+        }
+        private void cboFiltreProfil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Profil profil = cboFiltreProfil.SelectedItem as Profil;
+            if (profil == null || profil.Idprofil == 0)
+            {
+                // Affiche tous les développeurs
+                RemplirListeDeveloppeurs();
+            }
+            else
+            {
+                RemplirListeDeveloppeurs(profil.Idprofil);
+            }
         }
 
     }

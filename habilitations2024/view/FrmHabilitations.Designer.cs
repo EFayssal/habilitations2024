@@ -52,7 +52,9 @@
             this.btnDemandeSupprDev = new System.Windows.Forms.Button();
             this.btnDemandeModifDev = new System.Windows.Forms.Button();
             this.grbLesDeveloppeurs = new System.Windows.Forms.GroupBox();
+            this.cboFiltreProfil = new System.Windows.Forms.ComboBox();
             this.dgvDeveloppeurs = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
             this.grbPwd.SuspendLayout();
             this.grbDeveloppeur.SuspendLayout();
             this.grbLesDeveloppeurs.SuspendLayout();
@@ -288,6 +290,8 @@
             // 
             // grbLesDeveloppeurs
             // 
+            this.grbLesDeveloppeurs.Controls.Add(this.label8);
+            this.grbLesDeveloppeurs.Controls.Add(this.cboFiltreProfil);
             this.grbLesDeveloppeurs.Controls.Add(this.btnDemandeChangePwd);
             this.grbLesDeveloppeurs.Controls.Add(this.btnDemandeSupprDev);
             this.grbLesDeveloppeurs.Controls.Add(this.btnDemandeModifDev);
@@ -298,6 +302,16 @@
             this.grbLesDeveloppeurs.TabIndex = 4;
             this.grbLesDeveloppeurs.TabStop = false;
             this.grbLesDeveloppeurs.Text = "les développeurs";
+            // 
+            // cboFiltreProfil
+            // 
+            this.cboFiltreProfil.FormattingEnabled = true;
+            this.cboFiltreProfil.Items.AddRange(new object[] {
+            "dd"});
+            this.cboFiltreProfil.Location = new System.Drawing.Point(394, 233);
+            this.cboFiltreProfil.Name = "cboFiltreProfil";
+            this.cboFiltreProfil.Size = new System.Drawing.Size(121, 21);
+            this.cboFiltreProfil.TabIndex = 4;
             // 
             // dgvDeveloppeurs
             // 
@@ -315,6 +329,15 @@
             this.dgvDeveloppeurs.Size = new System.Drawing.Size(581, 206);
             this.dgvDeveloppeurs.TabIndex = 0;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(308, 236);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Filtrer par profil";
+            // 
             // FrmHabilitations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,6 +353,7 @@
             this.grbDeveloppeur.ResumeLayout(false);
             this.grbDeveloppeur.PerformLayout();
             this.grbLesDeveloppeurs.ResumeLayout(false);
+            this.grbLesDeveloppeurs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeveloppeurs)).EndInit();
             this.ResumeLayout(false);
 
@@ -362,6 +386,8 @@
         private System.Windows.Forms.Button btnDemandeModifDev;
         private System.Windows.Forms.GroupBox grbLesDeveloppeurs;
         private System.Windows.Forms.DataGridView dgvDeveloppeurs;
+        private System.Windows.Forms.ComboBox cboFiltreProfil;
+        private System.Windows.Forms.Label label8;
     }
 }
 
