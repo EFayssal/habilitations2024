@@ -40,6 +40,7 @@ namespace habilitations2024.controller
             return developpeurAccess.GetLesDeveloppeurs(idProfil);
         }
 
+
         /// <summary>
         /// Récupère et retourne les infos des profils
         /// </summary>

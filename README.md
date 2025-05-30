@@ -19,6 +19,10 @@ Voici la structure de la BDD qui est au format MySQL :<br>
 Voici à quoi doit ressembler la fenêtre de l'application :<br>
 ![1-Ecran](https://github.com/user-attachments/assets/10cac07c-38f3-49fb-a102-8fe45876f58a)
 <br>
+Mission 1.2 : La création de tests unitaires pour la méthode GetLesDeveloppeurs :<br>
+![2-Ecran](https://github.com/user-attachments/assets/f8383948-0186-4cb9-a969-7d7fc0144f0f)
+
+<br>
 L'application doit permettre de :<br>
 . présenter la liste des développeurs (nom, prénom, tel, mail, profil) sachant qu'il existe une liste déterminée de profils (admin, stagiaire, designer, dev-front, dev-back) ;<br>
 . permettre d'ajouter un développeur (le pwd est alors par défaut initialisé avec le nom du développeur) ;<br>
